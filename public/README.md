@@ -1,0 +1,1 @@
+This folder contains static assets for the Organomics Next.js project.

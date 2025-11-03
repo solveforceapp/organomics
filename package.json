@@ -1,0 +1,20 @@
+{
+  "name": "organomics",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=18.18"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "build:cloudflare:pages": "npx @cloudflare/next-on-pages@1",
+    "build:opennext": "npx opennext@latest build"
+  },
+  "dependencies": {
+    "next": "^16.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
