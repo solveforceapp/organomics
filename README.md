@@ -1,23 +1,17 @@
 # Organomics
 
-Dual-implementation site:
-- `index.html` — legacy static landing (fully styled)
-- `pages/` — Next.js app (React), with global styles in `style.css`
+Simple static site. No frameworks, no build.
 
 ## Develop
-- Install: `npm install`
-- Dev server: `npm run dev` → http://localhost:3000
-- Build: `npm run build`
-- Start: `npm run start`
- - Cloudflare parity: `npm run build:opennext` (OpenNext) or `npm run build:cloudflare:pages` (legacy)
+- Open `index.html` in your browser.
+- Optional: serve locally with any static server (e.g., `python -m http.server`).
 
 ## Deploy (Cloudflare Pages)
-See `DEPLOYING.md` for detailed steps.
+- Framework preset: None
+- Root Directory: repository root (contains `index.html`)
+- Build command: leave empty
+- Output directory: leave empty
 
-Quick checklist:
-1) `next` in dependencies (not devDependencies)
-2) Commit `package-lock.json`
-3) Root Directory points to the folder with `package.json` + `package-lock.json`
-4) Build command (choose one):
-	- Recommended (OpenNext): `npx opennext@latest build`
-	- Legacy (next-on-pages): `npx @cloudflare/next-on-pages@1`
+## Notes
+- Keep content and styles inside `index.html`.
+- If you add media, put it in `assets/` and reference via relative paths.
